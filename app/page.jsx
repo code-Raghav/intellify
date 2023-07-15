@@ -1,0 +1,12 @@
+import Nav from "@/components/Nav";
+import Image from "next/image";
+
+export default function Home() {
+  return (
+    <>
+      <Nav />
+      <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-std-pattern rounded-full bg-white"></main>
+      <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white"></main>
+    </>
+  );
+}
