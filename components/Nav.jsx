@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
 import { Link } from "react-scroll";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -46,7 +46,7 @@ const Nav = () => {
   return (
     <div className="fixed left-0 top-0 w-full z-10 ease-in duration-300 border-b-[1px] border-gray-400 bg-white">
       <div
-        className={`md:px-10 lg:px-20 m-auto grid grid-cols-3 justify-between items-center ${padding} text-white`}
+        className={`md:px-10 lg:px-20 m-auto flex md:grid md:grid-cols-5 justify-between items-center ${padding} text-white`}
       >
         <Link
           activeClass="active"
@@ -54,29 +54,29 @@ const Nav = () => {
           smooth={true}
           offset={0}
           duration={500}
-          className=" md:pl-10"
+          className=" md:pl-10 md:col-span-2"
         ></Link>
         <ul
           style={{ color: `${textColor}` }}
-          className={`hidden sm:flex col-span-2`}
+          className={`hidden sm:flex md:col-span-3`}
         >
-          <li className="p-4">
+          <li className="p-4 px-8">
             <Link
               activeClass="active"
               to="home"
               smooth={true}
               offset={0}
               duration={500}
-              className="cursor-pointer font-semibold text-md sm:text-sm lg:text-lg relative group"
+              className="cursor-pointer font-bold text-md sm:text-sm lg:text-lg relative group"
             >
-              <span>Home</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-400 transition-all group-hover:w-full"></span>
+              <span className="hover:text-blue-700">Home</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-700 transition-all group-hover:w-full"></span>
             </Link>
           </li>
-          <li className="p-2 pt-[10px]">
+          <li className="p-2 pt-[10px] hover:text-blue-700">
             <Dropdown>
               <Dropdown.Button light color={textColor}>
-                <div className="cursor-point font-semibold text-md sm:text-sm lg:text-lg relative group ">
+                <div className=" cursor-point font-bold text-md sm:text-sm lg:text-lg relative group ">
                   Services
                 </div>
               </Dropdown.Button>
@@ -123,10 +123,10 @@ const Nav = () => {
               </Dropdown.Menu>
             </Dropdown>
           </li>
-          <li className="p-2 pt-[10px]">
+          <li className="p-2 pt-[10px] hover:text-blue-700">
             <Dropdown>
               <Dropdown.Button light color={textColor}>
-                <div className="cursor-point font-semibold text-md sm:text-sm lg:text-lg relative group ">
+                <div className="cursor-point font-bold text-md sm:text-sm lg:text-lg relative group ">
                   Pricing
                 </div>
               </Dropdown.Button>
@@ -173,50 +173,51 @@ const Nav = () => {
               </Dropdown.Menu>
             </Dropdown>
           </li>
-          <li className="p-4">
+          <li className="p-4 px-8">
             <Link
               activeClass="active"
               to="booking"
               smooth={true}
               offset={-63}
               duration={500}
-              className="cursor-pointer font-semibold text-md sm:text-sm lg:text-lg relative group "
+              className="cursor-pointer font-bold text-md sm:text-sm lg:text-lg relative group "
             >
-              <span>Search</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-400 transition-all group-hover:w-full"></span>
+              <span className="hover:text-blue-700">🔍Search</span>
+
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-700 transition-all group-hover:w-full"></span>
             </Link>
           </li>
 
-          <li className="p-4">
+          <li className="p-4 px-8">
             <span
-              className="cursor-pointer font-semibold text-md sm:text-sm lg:text-lg relative group "
+              className="cursor-pointer font-bold text-md sm:text-sm lg:text-lg relative group "
               onClick={goToMember}
             >
-              <span>Login</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-400 transition-all group-hover:w-full"></span>
+              <span className="hover:text-blue-700">Login</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-700 transition-all group-hover:w-full"></span>
             </span>
           </li>
-          <li className="p-4">
+          <li className="p-4 px-8">
             <Link
               activeClass="active"
               to="booking"
               smooth={true}
               offset={-63}
               duration={500}
-              className="cursor-pointer font-semibold text-md sm:text-sm lg:text-lg relative group "
+              className="cursor-pointer font-bold text-md sm:text-sm lg:text-lg relative group "
             >
-              <span>Sign Up</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-400 transition-all group-hover:w-full"></span>
+              <span className="hover:text-blue-700">Sign Up</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-700 transition-all group-hover:w-full"></span>
             </Link>
           </li>
-          <li className="p-4">
+          <li className="p-4 px-8">
             <Link
               activeClass="active"
               to="booking"
               smooth={true}
               offset={-63}
               duration={500}
-              className="cursor-pointer font-semibold text-md sm:text-sm lg:text-lg relative group "
+              className="cursor-pointer font-bold text-md sm:text-sm lg:text-lg relative group "
             >
               <span>Request Demo</span>
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-400 transition-all group-hover:w-full"></span>
@@ -388,13 +389,6 @@ const Nav = () => {
                 Search
               </Link>
             </li>
-
-            {/* <li
-              onClick={handleNav}
-              className="p-4 text-lg font-bold hover:text-gray-500"
-            >
-              <div onClick={goToMember}>Members</div>
-            </li> */}
             <li className="p-4 text-lg font-bold hover:text-gray-500 cursor-pointer">
               <Link
                 activeClass="active"
