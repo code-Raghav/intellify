@@ -44,9 +44,9 @@ const Nav = () => {
   };
 
   return (
-    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-300 border-b-[1px] border-gray-400 bg-white">
+    <div className="left-0 top-0 w-full z-10 ease-in duration-300 border-b-[1px] border-gray-400 bg-white absolute">
       <div
-        className={`md:px-10 lg:px-20 m-auto flex md:grid md:grid-cols-5 justify-between items-center ${padding} text-white`}
+        className={`md:px-10 lg:px-20 z-50 m-auto flex md:grid md:grid-cols-5 xl:grid-cols-10 justify-between items-center ${padding} text-white`}
       >
         <Link
           activeClass="active"
@@ -54,29 +54,29 @@ const Nav = () => {
           smooth={true}
           offset={0}
           duration={500}
-          className=" md:pl-10 md:col-span-2"
+          className=" md:pl-10 md:col-span-1 xl:col-span-3"
         ></Link>
         <ul
           style={{ color: `${textColor}` }}
-          className={`hidden sm:flex md:col-span-3`}
+          className={`hidden sm:flex md:col-span-5 xl:col-span-7`}
         >
-          <li className="p-4 px-8">
+          <li className="p-4 px-1 md:px-6 xl:px-8">
             <Link
               activeClass="active"
               to="home"
               smooth={true}
               offset={0}
               duration={500}
-              className="cursor-pointer font-bold text-md sm:text-sm lg:text-lg relative group"
+              className="cursor-pointer font-bold text-md sm:text-sm lg:text-base xl:text-lg relative group"
             >
               <span className="hover:text-blue-700">Home</span>
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-700 transition-all group-hover:w-full"></span>
             </Link>
           </li>
-          <li className="p-2 pt-[10px] hover:text-blue-700">
+          <li className="py-2 xl:p-2 pt-[10px] hover:text-blue-700">
             <Dropdown>
               <Dropdown.Button light color={textColor}>
-                <div className=" cursor-point font-bold text-md sm:text-sm lg:text-lg relative group ">
+                <div className=" cursor-point font-bold text-md sm:text-sm lg:text-base xl:text-lg relative group ">
                   Services
                 </div>
               </Dropdown.Button>
@@ -123,10 +123,10 @@ const Nav = () => {
               </Dropdown.Menu>
             </Dropdown>
           </li>
-          <li className="p-2 pt-[10px] hover:text-blue-700">
+          <li className="py-2 xl:p-2 pt-[10px] hover:text-blue-700">
             <Dropdown>
               <Dropdown.Button light color={textColor}>
-                <div className="cursor-point font-bold text-md sm:text-sm lg:text-lg relative group ">
+                <div className="cursor-point font-bold text-md sm:text-sm lg:text-base xl:text-lg relative group ">
                   Pricing
                 </div>
               </Dropdown.Button>
@@ -173,14 +173,14 @@ const Nav = () => {
               </Dropdown.Menu>
             </Dropdown>
           </li>
-          <li className="p-4 px-8">
+          <li className="p-4 px-1 md:px-6  xl:px-8">
             <Link
               activeClass="active"
               to="booking"
               smooth={true}
               offset={-63}
               duration={500}
-              className="cursor-pointer font-bold text-md sm:text-sm lg:text-lg relative group "
+              className="cursor-pointer font-bold text-md sm:text-sm lg:text-base xl:text-lg relative group "
             >
               <span className="hover:text-blue-700">🔍Search</span>
 
@@ -188,39 +188,38 @@ const Nav = () => {
             </Link>
           </li>
 
-          <li className="p-4 px-8">
+          <li className="p-4 px-1 md:px-6  xl:px-8">
             <span
-              className="cursor-pointer font-bold text-md sm:text-sm lg:text-lg relative group "
+              className="cursor-pointer font-bold text-md sm:text-sm lg:text-base xl:text-lg relative group "
               onClick={goToMember}
             >
               <span className="hover:text-blue-700">Login</span>
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-700 transition-all group-hover:w-full"></span>
             </span>
           </li>
-          <li className="p-4 px-8">
+          <li className="p-4 px-6 xl:px-8">
             <Link
               activeClass="active"
               to="booking"
               smooth={true}
               offset={-63}
               duration={500}
-              className="cursor-pointer font-bold text-md sm:text-sm lg:text-lg relative group "
+              className="cursor-pointer font-bold text-md sm:text-sm lg:text-base xl:text-lg relative group "
             >
               <span className="hover:text-blue-700">Sign Up</span>
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-700 transition-all group-hover:w-full"></span>
             </Link>
           </li>
-          <li className="p-4 px-8">
+          <li className="p-4 px-1 md:px-6 xl:px-8">
             <Link
               activeClass="active"
               to="booking"
               smooth={true}
               offset={-63}
               duration={500}
-              className="cursor-pointer font-bold text-md sm:text-sm lg:text-lg relative group "
+              className="cursor-pointer text-md sm:text-xs md:text-sm lg:text-base xl:text-lg relative group bg-blue-600 font-bold items-center hover:bg-blue-900 text-white px-2 py-4 md:px-6 md:py-4 border rounded-full "
             >
-              <span>Request Demo</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-400 transition-all group-hover:w-full"></span>
+              Request Demo
             </Link>
           </li>
         </ul>
