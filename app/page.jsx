@@ -118,7 +118,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-1">
           <div>
             <h1 className="text-sm pt-1 pb-5 md:pt-3 text-center font-semibold lg:text-3xl xl:text-5xl">
               From idea to launch - and every feature in between
@@ -139,6 +139,7 @@ export default function Home() {
             width={500}
             height={50}
             alt="Half Screen"
+            className="hidden md:block"
           />
         </div>
       </main>
