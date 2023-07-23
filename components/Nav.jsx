@@ -227,7 +227,7 @@ const Nav = () => {
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? (
-            <AiOutlineClose size={20} style={{ color: `${"black"}` }} />
+            <AiOutlineClose size={24} style={{ color: `${"black"}` }} />
           ) : (
             <AiOutlineMenu size={24} style={{ color: `${textColor}` }} />
           )}

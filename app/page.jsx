@@ -57,7 +57,7 @@ export default function Home() {
         </div>
       </main>
       <main className="flex min-h-full flex-col items-center justify-between bg-white pt-5">
-        <div className="pb-10 px-4">
+        <div className="pb-10 px- ">
           <h1 className="text-xl pt-1 md:pt-3 text-center font-semibold lg:text-3xl xl:text-5xl">
             Introducing LawGPT, India’s first reliable AI legal assistant
           </h1>
@@ -66,7 +66,7 @@ export default function Home() {
             information, and assist you with legal discussions.
           </p>
         </div>
-        <div>
+        <div className="px-2 md:px-4">
           <Image
             src={"/Images/img3.png"}
             width={1000}
@@ -118,29 +118,56 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="grid grid-cols-1">
-          <div>
-            <h1 className="text-sm pt-1 pb-5 md:pt-3 text-center font-semibold lg:text-3xl xl:text-5xl">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="px-4 pb-4">
+            <h1 className="text-base pt-1 pb-5 md:pt-3 text-center font-semibold md:text-2xl md:px-10 lg:text-3xl xl:text-5xl">
               From idea to launch - and every feature in between
             </h1>
-            <div className="bg-slate-50 border p-2 rounded flex">
-              <Image
-                src={"/Logo/one.png"}
-                width={50}
-                height={50}
-                alt="Robot"
-                className="pr-2"
-              />
-              <p className="text-xs font-semibold">1. Create an account.</p>
+            <div className="bg-white border p-2 px-4 rounded flex md:mt-16">
+              <div className="relative w-8 h-8 my-auto">
+                <Image src={"/Logo/one.png"} fill alt="Robot" className="" />
+              </div>
+              <p className="text-xs font-semibold pl-4">
+                1. Create an account or logs into an existing account.
+              </p>
+            </div>
+            <div className="bgwhite my-6 border p-2 px-4 rounded flex">
+              <div className="relative w-9 h-8 my-auto">
+                <Image src={"/Logo/two.png"} fill alt="Robot" className="" />
+              </div>
+              <p className="text-xs font-semibold pl-4">
+                2. Define a goal or task, and formulate a request or quory.
+              </p>
+            </div>
+            <div className="bg-white border p-2 px-4 rounded flex">
+              <div className="relative w-12 h-8 my-auto">
+                <Image src={"/Logo/three.png"} fill alt="Robot" className="" />
+              </div>
+              <p className="text-xs font-semibold pl-4">
+                3. LawGPT process the input and generates a output based on your
+                request.
+              </p>
+            </div>
+            <div className="w-full flex justify-center items-center mt-6">
+              <Link
+                role="button"
+                href={"#"}
+                className="bg-blue-600 font-bold items-center hover:bg-blue-900 text-white text-sm px-6 py-4  border rounded-full"
+              >
+                Request Demo
+              </Link>
             </div>
           </div>
-          <Image
-            src={"/Images/img4.png"}
-            width={500}
-            height={50}
-            alt="Half Screen"
-            className="hidden md:block"
-          />
+
+          <div className="w-full h-full flex justify-end">
+            <Image
+              src={"/Images/img4.png"}
+              width={400}
+              height={50}
+              alt="Half Screen"
+              className="hidden md:block"
+            />
+          </div>
         </div>
       </main>
     </>
